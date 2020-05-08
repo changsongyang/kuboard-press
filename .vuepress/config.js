@@ -11,6 +11,7 @@ module.exports = {
     // ['meta', {name: 'keywords', content: 'Kubernetes教程,Kubernetes安装,K8S教程,K8S安装,Kubernetes管理界面'}],
     ['link', { rel: 'icon', href: '/favicon.png' }],
     ['link', { rel: 'manifest', href: '/manifest.json' }],
+    // ['link', { rel: 'stylesheet', href: '/grey.css'}],
     ['meta', { name: 'theme-color', content: '#007af5' }],
     ['meta', { name: 'apple-mobile-web-app-capable', content: 'yes' }],
     ['meta', { name: 'apple-mobile-web-app-status-bar-style', content: 'black' }],
@@ -23,36 +24,11 @@ module.exports = {
       s.parentNode.insertBefore(hm, s);
     })();
     `],
-    // ['script', {src: '/java-script-dist/swiper-4.5.0/js/swiper.min.js', async: true}],
-    // ['script', {src: "https://www.googletagmanager.com/gtag/js?id=UA-144196556-1", async: true}],
-    // ['script', {}, `
-    // window.dataLayer = window.dataLayer || [];
-    // function gtag(){dataLayer.push(arguments);}
-    // gtag('js', new Date());
 
-    // gtag('config', 'UA-144196556-1');
-    // `],
     ['script', { 'data-ad-client': "ca-pub-3313149841665250", async: true, src: "https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"}],
-    // <script data-ad-client="ca-pub-3313149841665250" async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+    // ['script', { type: 'text/javascript', src: '//downloads.mailchimp.com/js/signup-forms/popup/unique-methods/embed.js', 'data-dojo-config': 'usePlainJson: true, isDebug: false'}],
+    // ['script', { type: 'text/javascript'}, `window.dojoRequire(["mojo/signup-forms/Loader"], function(L) { L.start({"baseUrl":"mc.us20.list-manage.com","uuid":"2273cb19eb20bb1bc5b7745a7","lid":"f1f25d6dac","uniqueMethods":true}) })`],
 
-    // ['script', { type: 'text/javascript', async: true, src: "https://bot.4paradigm.com/web/assets/ics-web-sdk-js.js" }],
-    // ['script', { type: 'text/javascript' }, `
-    //   window.onload = function() {
-    //     if (window.innerWidth > 1360) {
-    //       console.log('init-wechat')
-    //       IcsWebSdkJs.init('https://bot.4paradigm.com/web/chat/15516/bbc69136-e42c-4299-ba85-c57685c8417d')
-    //     } else {
-    //       console.log('窗口太小，不显示机器人')
-    //     }
-    //   }`],
-    
-    // <script type="text/javascript" src="https://bot.4paradigm.com/web/assets/ics-web-sdk-js.js"></script>
-
-    // <script type="text/javascript">
-
-    // IcsWebSdkJs.init('https://bot.4paradigm.com/web/chat/15516/bbc69136-e42c-4299-ba85-c57685c8417d')
-
-    // </script>
   ],
   markdown: {
     toc: { includeLevel: [2, 3] },
@@ -69,7 +45,7 @@ module.exports = {
     '@vuepress/back-to-top': {},
     '@vuepress/last-updated': {
       transformer: (timestamp, lang) => {
-        return dateFns.format(timestamp, 'YYYY-MM-DD HH:mm:ss')
+        return dateFns.format(timestamp, 'yyyy-MM-dd HH:mm:ss')
       }
     },
     'vuepress-plugin-code-copy': {
@@ -157,9 +133,9 @@ module.exports = {
       { text: '教程', link: '/learning/' },
       { text: '使用', link: '/guide/' },
       { text: '支持', link: '/support/' },
-      { text: '培训', link: 'https://kubetrain.cn/?from=kuboard', target: '_blank' },
+      // { text: '培训', link: 'https://kubetrain.cn/?from=kuboard', target: '_blank' },
       // { text: '博客', link: 'http://k8s.kubetrain.cn/' },
-      { text: '论坛', link: 'http://bbs.kuboard.cn/', target: '_blank' },
+      // { text: '论坛', link: 'http://bbs.kuboard.cn/', target: '_blank' },
       // { text: 'DevOps', link: '/devops/' }
     ],
     displayAllHeaders: false,

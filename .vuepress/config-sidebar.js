@@ -38,18 +38,34 @@ module.exports = {
         'install-kubernetes',
         'sealos/',
         'install-node-port-range',
+        'docker-mirror',
         'k8s-restart',
       ]
     },
     {
-      title: '管理 Kubernetes',
+      title: '安装 Kubernetes 管理工具',
       collapsable: false,
       children: [
         'install-dashboard',
         'install-dashboard-offline',
-        'install-dashboard-upgrade',
-        'install-kubectl',
-        'config-kubectl',
+        {
+          title: '配置Kuboard',
+          collapsable: true,
+          children: [
+            'install-dashboard-upgrade',
+            'install-kuboard-layout',
+            'install-kuboard-env',
+          ]
+        },
+        {
+          title: 'kubectl',
+          collapsable: true,
+          children: [
+            'install-kubectl',
+            'config-kubectl',
+            'install-kubectl-sa',
+          ]
+        },
         'install-k8s-dashboard',
       ]
     },
@@ -173,6 +189,7 @@ module.exports = {
                 'k8s-intermediate/workload/wl-deployment/pause',
                 'k8s-intermediate/workload/wl-deployment/status',
                 'k8s-intermediate/workload/wl-deployment/cleanup',
+                'k8s-intermediate/workload/wl-deployment/strategy',
                 'k8s-intermediate/workload/wl-deployment/canary',
               ]
             },
@@ -397,14 +414,36 @@ module.exports = {
           title: '安全',
           collapsable: true,
           children: [
-            'k8s-advanced/sec/sa-admin',
-            'k8s-advanced/sec/rbac/api',
-            'k8s-advanced/sec/rbac/default',
-            'k8s-advanced/sec/rbac/escalation',
-            'k8s-advanced/sec/rbac/cmd',
-            'k8s-advanced/sec/rbac/sa',
-            'k8s-advanced/sec/rbac/permissive',
-            'k8s-advanced/sec/rbac/example',
+            {
+              title: '用户认证',
+              collapsable: true,
+              children: [
+                'k8s-advanced/sec/authenticate/',
+                'k8s-advanced/sec/sa-admin',
+                'k8s-advanced/sec/authenticate/install',
+              ]
+            }, {
+              title: '用户授权',
+              collapsable: true,
+              children: [
+                'k8s-advanced/sec/kuboard',
+                'k8s-advanced/sec/rbac/logs.html',
+                'k8s-advanced/sec/rbac/api',
+                'k8s-advanced/sec/rbac/default',
+                'k8s-advanced/sec/rbac/escalation',
+                'k8s-advanced/sec/rbac/cmd',
+                'k8s-advanced/sec/rbac/sa',
+                'k8s-advanced/sec/rbac/permissive',
+                'k8s-advanced/sec/rbac/example',
+              ]
+            },
+          ]
+        },
+        {
+          title: '监控',
+          collapsable: true,
+          children: [
+            'k8s-advanced/observe/kube-prometheus.html',
           ]
         },
         {
@@ -493,6 +532,7 @@ module.exports = {
       children: [
         'faq/ping-service',
         'faq/request-limit',
+        'faq/image-pull-backoff'
       ]
     },
   ],
@@ -541,7 +581,25 @@ module.exports = {
       children: [
         'diagonize/events',
         'diagonize/logs',
-        'diagonize/port-forward'
+        'diagonize/port-forward',
+        'diagonize/skills',
+      ]
+    },
+    {
+      title: 'Kuboard Proxy',
+      collapsable: false,
+      children: [
+        ['proxy/', 'Kuboard Proxy 介绍'],
+        ['proxy/authorization', '授权用户访问 Kuboard Proxy'],
+        ['proxy/rebase', '为何极少部分网页显示不正常-Rebase'],
+        ['proxy/auth-proxy', '使用Auth-Proxy实现单点登录']
+      ]
+    },
+    {
+      title: 'CI/CD集成',
+      collapsable: false,
+      children: [
+        'cicd/'
       ]
     },
     {
@@ -561,13 +619,6 @@ module.exports = {
         'monitor/',
       ]
     },
-    {
-      title: 'CI/CD集成',
-      collapsable: false,
-      children: [
-        'cicd/'
-      ]
-    }
   ],
 
   '/t/': [
@@ -593,6 +644,7 @@ module.exports = {
       collapsable: false,
       children: [
         'change-log/v1.0.x',
+        'known-issue',
       ]
     }
   ],

@@ -20,31 +20,31 @@
       <div class="side-nav-item" :style="activeLinkStyle('/support/')">
         <a :href="`/support/${urlSurfix}`" class="nav-link">支持</a>
       </div>
-      <div class="side-nav-item" :style="activeLinkStyle('/training/')">
+      <!-- <div class="side-nav-item" :style="activeLinkStyle('/training/')">
         <a :href="`https://kubetrain.cn/?from=kuboard`" class="nav-link" target="_blank">培训</a>
-      </div>
+      </div> -->
       <!-- <div class="side-nav-item">
         <a href="http://k8s.kubetrain.cn" class="nav-link" target="_blank">博客</a>
       </div> -->
-      <div class="side-nav-item">
+      <!-- <div class="side-nav-item">
         <a href="http://bbs.kuboard.cn" class="nav-link" target="_blank">论坛</a>
-      </div>
+      </div> -->
     </div>
     <slot name="top"/>
     <SidebarLinks :depth="0" :items="items"/>
     <slot name="bottom"/>
     <div style="text-align: center; margin-top: 5vh;">
-      <!-- <a target="_blank" :href="`http://demo.kuboard.cn/#/dashboard?k8sToken=${$site.themeConfig.kuboardToken}`">
+      <!-- <a target="_blank" :href="`http://demo.kuboard.cn/dashboard?k8sToken=${$site.themeConfig.kuboardToken}`">
         <img style="width: 242px; border: 1px solid #d7dae2;" src="/images/logo-main.png" alt="Kuboard_快速在Kubernetes上落地微服务"/>
       </a> -->
 
       <p>
         <strong>
-          <a target="_blank" :href="`http://demo.kuboard.cn/#/dashboard?k8sToken=${$site.themeConfig.kuboardToken}`">在线体验</a>
+          <a target="_blank" :href="`http://demo.kuboard.cn/dashboard?k8sToken=${$site.themeConfig.kuboardToken}`">在线体验</a>
         </strong>
       </p>
       <div>
-        <a target="_blank" :href="`http://demo.kuboard.cn/#/dashboard?k8sToken=${$site.themeConfig.kuboardToken}`">
+        <a target="_blank" :href="`http://demo.kuboard.cn/dashboard?k8sToken=${$site.themeConfig.kuboardToken}`">
           <FancyImage style="width: 242px;" src="/images/preview.gif" alt="Kubernetes教程_Kuboard在线体验" title="Kuboard" description="快速在 Kubernetes 上落地微服务"></FancyImage>
         </a>
       </div>

@@ -2,32 +2,32 @@
 vssueId: 15
 # layout: StepLayout
 sharingTitle: K8S入门第一步---安装，装不好还有人免费远程协助，更有K8S免费教程提供，你还在等什么？
-description: Kubernete安装文档_Kubernetes最新稳定版v1.17.x的快速安装文档_该文档由众多网友验证并在线提出修改意见_持续不断地更新和完善_并且通过QQ群提供免费在线答疑的服务
+description: Kubernete安装文档_Kubernetes最新稳定版v1.18.x的快速安装文档_该文档由众多网友验证并在线提出修改意见_持续不断地更新和完善_并且通过QQ群提供免费在线答疑的服务
 meta:
   - name: keywords
     content: Kubernetes安装,K8S安装,kubeadm,Kubernetes 安装,K8S 安装,k8s搭建
 ---
 
-# 使用kubeadm安装kubernetes_v1.17.x
+# 使用kubeadm安装kubernetes_v1.18.x
 
 <AdSenseTitle/>
 
 ## 文档特点
 
 <div style="min-height: 612px;">
-  <InstallBanner version="v1.17.x" updateCount="70"/>
+  <InstallBanner version="v1.18.x" updateCount="82"/>
 </div>
 
 参考此免费文档，98%以上的概率，您能够顺利完成 K8S 安装，极个别的问题可以到QQ群里免费答疑。
 
-同时，也许您还想：
-* 探究安装文档中每一个脚本的用途
-* 了解何规划自己的集群，并可以结合自己的实际情况对安装脚本做客户化定制
-* 了解快速落地 K8S 的最佳学习路径
+<Course courseId="477593" />
+<!-- 此课程配有直播视频讲解，点击此处可 [报名12元直播课程](https://ke.qq.com/course/477593?flowToken=1016935)
+* 讲解K8S集群规划
+* 以更加直观易于理解的形式讲解此安装过程
+* 介绍K8S学习路径
+* 报名学员如碰到安装问题，可获得远程协助
+> 第一次直播课已经于1月18日完成，现在 [报名]((https://ke.qq.com/course/477593?flowToken=1016935)) 可以随时看回看，如需要，还可在2月8日免费再听一次直播。 -->
 
-[报名直播课程-详细讲解此安装过程](https://ke.qq.com/course/477593?flowToken=1016935)
-
-也可以在此 [提出对直播课的要求](http://bbs.kuboard.cn/forum.php?mod=viewthread&tid=10)
 
 ## 配置要求
 
@@ -41,28 +41,24 @@ meta:
 
 <div> -->
 
-[【腾讯云】12.12云产品限时秒杀，爆款1核2G云服务器，99元/1年](https://cloud.tencent.com/act/cps/redirect?redirect=1052&cps_key=2ee6baa049659f4713ddc55a51314372&from=console)
+[【2核4G云服务器低至331元/年，限时抢购】华为云开年回馈用户，产品低至1折](https://activity.huaweicloud.com/2020feb_promotion/invite.html?fromuser=05f073ad3c0010ea0f4bc00b7105ec20&fromacct=36cf686d-2650-4107-baa4-f0dc3c860df4&needGalaxy=true)
 
-<!-- [腾讯云限时1折秒杀](https://cloud.tencent.com/act/cps/redirect?redirect=1044&cps_key=2ee6baa049659f4713ddc55a51314372&from=console) -->
+[【腾讯云】云产品采购季，助力行业复工。1核2G云服务器，首年99元](https://cloud.tencent.com/act/cps/redirect?redirect=1053&cps_key=2ee6baa049659f4713ddc55a51314372&from=console)
+
 
 <!-- [阿里云，双十二主会场，低至一折](https://www.aliyun.com/1212/2019/home?userCode=obezo3pg) -->
 
 **安装后的软件版本为**
 
-* Kubernetes v1.17.x
-  * calico 3.10.2
+* Kubernetes v1.18.x
+  * calico 3.13.1
   * nginx-ingress 1.5.5
-* Docker 18.09.7
+* Docker 19.03.8
 
 > 如果要安装 Kubernetes 历史版本，请参考：
+> * [安装 Kubernetes v1.17.x 单Master节点](/install/history-k8s/install-k8s-1.17.x.html)
 > * [安装 Kubernetes v1.16.3 单Master节点](/install/history-k8s/install-k8s-1.16.3.html)
-> * [安装 Kubernetes v1.16.2 单Master节点](/install/history-k8s/install-k8s-1.16.2.html)
-> * [安装 Kubernetes v1.16.1 单Master节点](/install/history-k8s/install-k8s-1.16.1.html)
-> * [安装 Kubernetes v1.16.0 单Master节点](/install/history-k8s/install-k8s-1.16.0.html)
 > * [安装 Kubernetes v1.15.4 单Master节点](/install/history-k8s/install-k8s-1.15.4.html)
-> * [安装 Kubernetes v1.15.3 单Master节点](/install/history-k8s/install-k8s-1.15.3.html)
-> * [安装 Kubernetes v1.15.2 单Master节点](/install/history-k8s/install-k8s-1.15.2.html)
-> * [安装 Kubernetes v1.15.1 单Master节点](/install/history-k8s/install-k8s-1.15.1.html)
 
 <!-- </div>
 
@@ -117,9 +113,9 @@ lscpu
 | 7.7         | <span style="font-size: 24px;">😄</span> | 已验证                              |
 | 7.6         | <span style="font-size: 24px;">😄</span> | 已验证                              |
 | 7.5         | <span style="font-size: 24px;">😞</span> | 已证实会出现 kubelet 无法启动的问题    |
-| 7.4         | <span style="font-size: 24px;">😞</span> | 同上                              |
-| 7.3         | <span style="font-size: 24px;">😞</span> | 同上                              |
-| 7.2         | <span style="font-size: 24px;">😞</span> | 同上                              |
+| 7.4         | <span style="font-size: 24px;">😞</span> | 已证实会出现 kubelet 无法启动的问题                              |
+| 7.3         | <span style="font-size: 24px;">😞</span> | 已证实会出现 kubelet 无法启动的问题                              |
+| 7.2         | <span style="font-size: 24px;">😞</span> | 已证实会出现 kubelet 无法启动的问题                              |
 
 </div>
   </grid-item>
@@ -182,23 +178,50 @@ default via 172.21.0.1 dev eth0
 <b-card>
 <b-tabs content-class="mt-3">
   <b-tab title="快速安装" active>
-**请将脚本最后的 1.17.0 替换成您需要的版本号，**
-<font color="red">脚本中间的 v1.17.x 不要替换</font>
 
+**请将脚本最后的 1.18.2 替换成您需要的版本号，**
+<font color="red">脚本中间的 v1.18.x 不要替换</font>
+
+> docker hub 镜像请根据自己网络的情况任选一个
+> * 第四行为腾讯云 docker hub 镜像
+> * 第六行为DaoCloud docker hub 镜像
+> * 第八行为华为云 docker hub 镜像
+> * 第十行为阿里云 docker hub 镜像
 ``` sh
 # 在 master 节点和 worker 节点都要执行
-# 最后一个参数 1.17.0 用于指定 kubenetes 版本，支持所有 1.17.x 版本的安装
-
-curl -sSL https://kuboard.cn/install-script/v1.17.x/install_kubelet.sh | sh -s 1.17.0
-
+# 最后一个参数 1.18.2 用于指定 kubenetes 版本，支持所有 1.18.x 版本的安装
+# 腾讯云 docker hub 镜像
+# export REGISTRY_MIRROR="https://mirror.ccs.tencentyun.com"
+# DaoCloud 镜像
+# export REGISTRY_MIRROR="http://f1361db2.m.daocloud.io"
+# 华为云镜像
+# export REGISTRY_MIRROR="https://05f073ad3c0010ea0f4bc00b7105ec20.mirror.swr.myhuaweicloud.com"
+# 阿里云 docker hub 镜像
+export REGISTRY_MIRROR=https://registry.cn-hangzhou.aliyuncs.com
+curl -sSL https://kuboard.cn/install-script/v1.18.x/install_kubelet.sh | sh -s 1.18.2
 ```
 
   </b-tab>
   <b-tab title="手动安装">
 
-手动执行以下代码，结果与快速安装相同。<font color="red">***请将脚本第79行（已高亮）的 ${1} 替换成您需要的版本号，例如 1.17.0***</font>
+手动执行以下代码，结果与快速安装相同。<font color="red">***请将脚本第79行（已高亮）的 ${1} 替换成您需要的版本号，例如 1.18.2***</font>
 
-<<< @/.vuepress/public/install-script/v1.17.x/install_kubelet.sh {79}
+> docker hub 镜像请根据自己网络的情况任选一个
+> * 第四行为腾讯云 docker hub 镜像
+> * 第六行为DaoCloud docker hub 镜像
+> * 第八行为阿里云 docker hub 镜像
+``` sh
+# 在 master 节点和 worker 节点都要执行
+# 最后一个参数 1.18.2 用于指定 kubenetes 版本，支持所有 1.18.x 版本的安装
+# 腾讯云 docker hub 镜像
+# export REGISTRY_MIRROR="https://mirror.ccs.tencentyun.com"
+# DaoCloud 镜像
+# export REGISTRY_MIRROR="http://f1361db2.m.daocloud.io"
+# 阿里云 docker hub 镜像
+export REGISTRY_MIRROR=https://registry.cn-hangzhou.aliyuncs.com
+```
+
+<<< @/.vuepress/public/install-script/v1.18.x/install_kubelet.sh {79}
 
 ::: warning
 如果此时执行 `service status kubelet` 命令，将得到 kubelet 启动失败的错误提示，请忽略此错误，因为必须完成后续步骤中 kubeadm init 的操作，kubelet 才能正常启动
@@ -226,10 +249,10 @@ curl -sSL https://kuboard.cn/install-script/v1.17.x/install_kubelet.sh | sh -s 1
 
 <b-card>
 <b-tabs content-class="mt-3">
-  <b-tab title="快速初始化" active>
+<b-tab title="快速初始化" active>
 
-**请将脚本最后的 1.17.0 替换成您需要的版本号，**
-<font color="red">脚本中间的 v1.17.x 不要替换</font>
+**请将脚本最后的 1.18.2 替换成您需要的版本号，**
+<font color="red">脚本中间的 v1.18.x 不要替换</font>
 
 ``` sh {10}
 # 只在 master 节点执行
@@ -241,13 +264,13 @@ export APISERVER_NAME=apiserver.demo
 # Kubernetes 容器组所在的网段，该网段安装完成后，由 kubernetes 创建，事先并不存在于您的物理网络中
 export POD_SUBNET=10.100.0.1/16
 echo "${MASTER_IP}    ${APISERVER_NAME}" >> /etc/hosts
-curl -sSL https://kuboard.cn/install-script/v1.17.x/init_master.sh | sh -s 1.17.0
+curl -sSL https://kuboard.cn/install-script/v1.18.x/init_master.sh | sh -s 1.18.2
 ```
 
-  </b-tab>
-  <b-tab title="手动初始化">
+</b-tab>
+<b-tab title="手动初始化">
 
-手动执行以下代码，结果与快速初始化相同。<font color="red">***请将脚本第21行（已高亮）的 ${1} 替换成您需要的版本号，例如 1.17.0***</font>
+手动执行以下代码，结果与快速初始化相同。<font color="red">***请将脚本第21行（已高亮）的 ${1} 替换成您需要的版本号，例如 1.18.2***</font>
 
 ``` sh
 # 只在 master 节点执行
@@ -261,9 +284,9 @@ export POD_SUBNET=10.100.0.1/16
 echo "${MASTER_IP}    ${APISERVER_NAME}" >> /etc/hosts
 ```
 
-<<< @/.vuepress/public/install-script/v1.17.x/init_master.sh {21}
+<<< @/.vuepress/public/install-script/v1.18.x/init_master.sh {21}
 
-  </b-tab>
+</b-tab>
 </b-tabs>
 </b-card>
 
@@ -304,6 +327,31 @@ watch kubectl get pod -n kube-system -o wide
 # 查看 master 节点初始化结果
 kubectl get nodes -o wide
 ```
+
+<b-button v-b-toggle.collapse-init-pending variant="danger" size="sm" style="margin-top: 1rem;" v-on:click="$sendGaEvent('install-k8s-pending', 'error-init-master', '查看初始化时的镜像下载错误的解决办法')">如果出错点这里</b-button>
+<b-collapse id="collapse-init-pending" class="mt-2">
+<b-card style="background-color: rgb(254, 240, 240); border: solid 1px #F56C6C;">
+
+* ImagePullBackoff / Pending
+  * 如果 `kubectl get pod -n kube-system -o wide` 的输出结果中出现 ImagePullBackoff 或者长时间处于 Pending 的情况，请参考 [查看镜像抓取进度](/learning/faq/image-pull-backoff.html)
+* ContainerCreating
+  * 如果 `kubectl get pod -n kube-system -o wide` 的输出结果中某个 Pod 长期处于 ContainerCreating、PodInitializing 或 Init:0/3 的状态，可以尝试：
+    * 查看该 Pod 的状态，例如：
+      ``` sh
+      kubectl describe pod kube-flannel-ds-amd64-8l25c -n kube-system
+      ```
+      如果输出结果中，最后一行显示的是 Pulling image，请耐心等待，或者参考 [查看镜像抓取进度](/learning/faq/image-pull-backoff.html)
+      ```
+      Normal  Pulling    44s   kubelet, k8s-worker-02  Pulling image "quay.io/coreos/flannel:v0.12.0-amd64"
+      ```
+    * 将该 Pod 删除，系统会自动重建一个新的 Pod，例如：
+      ``` sh
+      kubectl delete pod kube-flannel-ds-amd64-8l25c -n kube-system
+      ```
+
+
+</b-card>
+</b-collapse>
 
 <!-- </div>
 
@@ -438,9 +486,9 @@ kubectl get nodes -o wide
 ```sh
 [root@demo-master-a-1 ~]# kubectl get nodes
 NAME     STATUS   ROLES    AGE     VERSION
-demo-master-a-1   Ready    master   5m3s    v1.17.x
-demo-worker-a-1   Ready    <none>   2m26s   v1.17.x
-demo-worker-a-2   Ready    <none>   3m56s   v1.17.x
+demo-master-a-1   Ready    master   5m3s    v1.18.x
+demo-worker-a-1   Ready    <none>   2m26s   v1.18.x
+demo-worker-a-2   Ready    <none>   3m56s   v1.18.x
 ```
 
 
@@ -458,7 +506,7 @@ demo-worker-a-2   Ready    <none>   3m56s   v1.17.x
 
 ``` sh
 # 只在 master 节点执行
-kubectl apply -f https://kuboard.cn/install-script/v1.17.x/nginx-ingress.yaml
+kubectl apply -f https://kuboard.cn/install-script/v1.18.x/nginx-ingress.yaml
 ```
 
   </b-tab>
@@ -471,13 +519,13 @@ kubectl apply -f https://kuboard.cn/install-script/v1.17.x/nginx-ingress.yaml
 
 ``` sh
 # 只在 master 节点执行
-kubectl delete -f https://kuboard.cn/install-script/v1.17.x/nginx-ingress.yaml
+kubectl delete -f https://kuboard.cn/install-script/v1.18.x/nginx-ingress.yaml
 ```
 
   </b-tab>
   <b-tab title="YAML文件">
 
-<<< @/.vuepress/public/install-script/v1.17.x/nginx-ingress.yaml
+<<< @/.vuepress/public/install-script/v1.18.x/nginx-ingress.yaml
 
 
   </b-tab>
@@ -495,6 +543,8 @@ kubectl delete -f https://kuboard.cn/install-script/v1.17.x/nginx-ingress.yaml
 ::: tip 提示
 
 许多初学者在安装 Ingress Controller 时会碰到问题，请不要灰心，可暂时跳过 ***安装 Ingress Controller*** 这个部分，等您学完 www.kuboard.cn 上 [Kubernetes 入门](/learning/k8s-basics/kubernetes-basics.html) 以及 [通过互联网访问您的应用程序](/learning/k8s-intermediate/service/ingress.html) 这两部分内容后，再来回顾 Ingress Controller 的安装。
+
+也可以参考 [Install Nginx Ingress](https://docs.nginx.com/nginx-ingress-controller/installation/installation-with-manifests/)
 
 :::
 
@@ -516,12 +566,14 @@ kubectl delete -f https://kuboard.cn/install-script/v1.17.x/nginx-ingress.yaml
 
 您已经完成了 Kubernetes 集群的安装，下一步请：
 
-[报名直播课程-详细讲解此安装过程](https://ke.qq.com/course/477593?flowToken=1016934) 也可以在此 [提出对直播课的要求](http://bbs.kuboard.cn/forum.php?mod=viewthread&tid=10)
+<Course courseId="477593" />
 
-<span v-on:click="$sendGaEvent('安装后求GitHub Star','安装后求GitHub Star','安装后求GitHub Star')"><a href="https://github.com/eip-work/kuboard-press" target="_blank">点击此处，给个GitHub Star</a></span>
-支持一下吧，<StarCount></StarCount>这么多人都 star 了呢，怎么能少得了您呢？
+<!-- <span v-on:click="$sendGaEvent('安装后求GitHub Star','安装后求GitHub Star','安装后求GitHub Star')"><a href="https://github.com/eip-work/kuboard-press" target="_blank">点击此处，给个GitHub Star</a></span>
+支持一下吧，<StarCount></StarCount>这么多人都 star 了呢，怎么能少得了您呢？ -->
 
 [安装 Kuboard - 微服务管理界面](/install/install-dashboard.html)
+
+[使用 GitHub/GitLab 账号登录 Kubernetes](/learning/k8s-advanced/sec/authenticate/install.html)
 
 [获取 Kubernetes 免费教程](/learning/)
 
