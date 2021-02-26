@@ -21,32 +21,42 @@ export default {
 }
 </script>
 
-## 授权声明
 
-<div data-aos="fade-up">
-<grid :rwd="{compact: 'stack'}">
-  <grid-item size="2/3" :rwd="{tablet: '1/1', compact: '1/1'}">
+## Kuboard 介绍
 
-<b-card style="height: calc(100% - 1.5rem); color: #2c3e50; line-height: 1.7; margin-top: 1rem; border-color: #f2be45; background-color: rgba(242, 190, 69, 0.1)">
+Kuboard 是一款免费的 Kubernetes 管理工具，提供了丰富的功能，结合已有或新建的代码仓库、镜像仓库、CI/CD工具等，可以便捷的搭建一个生产可用的 Kubernetes 容器云平台，轻松管理和运行云原生应用。您也可以直接将 Kuboard 安装到现有的 Kubernetes 集群，通过 Kuboard 提供的 Kubernetes RBAC 管理界面，将 Kubernetes 提供的能力开放给您的开发/测试团队。Kuboard 提供的功能有：
 
-* 使用 Kuboard 是 <font color="red">免费</font> 的，无论您是用于学习还是用于生产
-* 只要您在本文末尾的评论区留下公司名字，您就已经 **取得将 Kuboard 用于生产环境的授权** 
-
-</b-card>
-
-</grid-item>
-  <grid-item size="1/3" :rwd="{tablet: '1/1', compact: '1/1'}">
-
-<b-card style="height: calc(100% - 1.5rem); color: #2c3e50; line-height: 1.7; margin-top: 1rem">
-  <div style="background-color: rgb(0, 99, 220); padding: 10px; max-width: 220px;">
-    <img src="/favicon.png" style="max-width: 200px;">
-  </div>
-</b-card>
-  </grid-item>
-</grid>
-</div>
-
-<!-- <KuboardLiscense></KuboardLiscense> -->
+* Kubernetes 基本管理功能
+  * 节点管理
+  * 名称空间管理
+  * 存储类/存储卷管理
+  * 控制器（Deployment/StatefulSet/DaemonSet/CronJob/Job/ReplicaSet）管理
+  * Service/Ingress 管理
+  * ConfigMap/Secret 管理
+  * CustomerResourceDefinition 管理
+* Kubernetes 问题诊断
+  * Top Nodes / Top Pods
+  * 事件列表及通知
+  * 容器日志及终端
+  * KuboardProxy (kubectl proxy 的在线版本)
+  * PortForward (kubectl port-forward 的快捷版本)
+  * 复制文件 （kubectl cp 的在线版本）
+* Kubernetes 存储管理
+  * 通过 ceph-csi 对接 CephFS
+  * 通过 ceph-csi 对接 Rook 安装的 CephFS
+  * 通过 nfs-client-provisioner 对接 NFS 类型的存储
+  * 对接其他类型的存储
+* 认证与授权
+  * Github/GitLab 单点登录
+  * KeyCloak 认证
+  * LDAP 认证
+  * 完整的 RBAC 权限管理
+* Kuboard 特色功能
+  * Kuboard 官方套件
+    * Grafana+Prometheus 资源监控
+    * Grafana+Loki+Promtail 日志聚合
+  * Kuboard 自定义名称空间布局
+  * Kuboard 中英文语言包
 
 ## Github Star
 
@@ -80,22 +90,39 @@ export default {
 </grid>
 </div>
 
+## 订阅
+
+<KbIframe v-if="isDev" style="margin-top: 10px" src="http://localhost:25679/public/home" :commands="commands"></KbIframe>
+<KbIframe v-else style="margin-top: 10px" src="https://uc.kuboard.cn/public/home" :commands="commands"></KbIframe>
+
+<script>
+export default {
+  data () {
+    return {
+      commands: {
+        openUserCenter: this.openUserCenter,
+      }
+    }
+  },
+  computed: {
+    isDev () {
+      return process.env.NODE_ENV === 'development'
+    }
+  },
+  methods: {
+    openUserCenter (params) {
+      let url = 'https://uc.kuboard.cn' + params.path
+      if (this.isDev) {
+        url = 'http://localhost:25679' + params.path
+      }
+      this.$openUrlInBlank(url)
+    },
+  }
+}
+</script>
+
 ## 已采纳用户
 
-只要您在此处留下公司名字，您就已经 **取得将 Kuboard 用于生产环境的授权** 
+<!-- 只要您在此处留下公司名字，您就已经 **取得将 Kuboard 用于生产环境的授权** 
 
-> 如果列表不能显示，请直接到这个链接留言 [Kuboard 授权列表](https://github.com/eip-work/kuboard-press/issues/71)
-
-
-<!-- ### 微服务落地咨询
-
-Kuboard 团队提供微服务实施落地的全过程咨询和实施，服务范围：
-<p>
-  <img src="./consulting.png">
-</p>
-
-如有需要请加微信：
-
-<p>
-  <img src="/images/dz2.jpeg" style="width: 200px;"></img>
-</p> -->
+> 如果列表不能显示，请直接到这个链接留言 [Kuboard 授权列表](https://github.com/eip-work/kuboard-press/issues/71) -->

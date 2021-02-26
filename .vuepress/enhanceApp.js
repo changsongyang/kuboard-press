@@ -88,7 +88,16 @@ export default ({
       });
     }, 200)
   }
-  console.log('sharing', sharing)
+  // console.log('sharing', sharing)
   Vue.prototype.$isSharing = sharing
+
+  Vue.prototype.$openUrlInBlank = function (url) {
+    let a = document.createElement('a')
+    document.body.appendChild(a)
+    a.setAttribute('href', url)
+    a.setAttribute('target', '_blank')
+    a.click()
+    document.body.removeChild(a)
+  }
 
 }

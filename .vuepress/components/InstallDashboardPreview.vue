@@ -12,15 +12,16 @@
             <p style="color: gray; font-size: 14px;">
             为保证环境的稳定性，在线 Demo 中只提供只读权限。<span style="color: #F56C6C; font-weight: 500;">（请在PC浏览器中打开）</span>
             </p>
-            <li>无需编写YAML</li>
-            <li>纯图形化环境</li>
-            <li>多环境管理</li>
+            <li>GitLab/GitHub 单点登录集成</li>
+            <li>RBAC 权限管理</li>
+            <li>工作负载编辑器</li>
+            <li>名称空间导出/导入</li>
           </b-card>
       </grid-item>
       <grid-item size="2/3" :rwd="{tablet: '1/1', compact: '1/1'}">
         <b-card style="height: 100%; border-color: #f2be45; background-color: rgba(242, 190, 69, 0.1)" shadow="hover">
           <a target="_blank" :href="`http://demo.kuboard.cn/dashboard?k8sToken=${$site.themeConfig.kuboardToken}`">
-            <FancyImage src="/images/preview.gif" alt="Kubernetes教程：Kuboard 在线Demo" title="Kuboard" description="快速在 Kubernetes 上落地微服务"></FancyImage>
+            <FancyImage src="/images/preview.png" alt="Kubernetes教程：Kuboard 在线Demo" title="Kuboard" description="快速在 Kubernetes 上落地微服务"></FancyImage>
           </a>
         </b-card>
       </grid-item>

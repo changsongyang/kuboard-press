@@ -24,10 +24,10 @@
             <h4>微信群</h4>
             <div>
               <div style="margin-top: 10px;">
-                <span>微信扫码</span>
+                <span>微信扫码</span> <span style="color: red">进群发广告者死全家...</span>
                 <p style="margin-top: 10px; margin-bottom: 0; text-align: center;">
                   <!-- <img src="/images/dz.png" style="width: 150px;"></img> -->
-                  <img src="/images/dz2.jpeg" style="width: 150px;"></img>
+                  <img src="https://addons.kuboard.cn/downloads/qr_code.jpg" style="width: 150px; padding: 8px;"></img>
                 </p>
               </div>
             </div>

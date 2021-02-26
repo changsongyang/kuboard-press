@@ -1,11 +1,19 @@
 module.exports = [
+  // {
+  //   name: 'Sealyun',
+  //   description: 'Kubernetes，',
+  //   strong: '一键离线安装',
+  //   action: '去看看',
+  //   url: 'https://github.com/fanux/sealos',
+  //   weight: 50
+  // },
   {
-    name: 'Sealyun',
-    description: 'Kubernetes，',
-    strong: '一键离线安装',
-    action: '去看看',
-    url: 'https://github.com/fanux/sealos',
-    weight: 60
+    name: '视频教程',
+    description: 'Kubernetes入门学习到企业实战的方方面面',
+    strong: 'Kuboard',
+    action: '免费试听',
+    url: 'https://ke.qq.com/course/package/32328?flowToken=1031971',
+    weight: 100
   },
   // {
   //   name: 'SOCK BOOM',
@@ -15,44 +23,21 @@ module.exports = [
   //   url: 'https://sockboom.tel/auth/register?affid=182351',
   //   weight: 100
   // },
-  // {
-  //   name: '华为云',
-  //   description: '【2核4G云服务器低至331元/年，限时抢购】华为云开年回馈用户，产品低至1折',
-  //   strong: '限时抢购',
-  //   action: '立享优惠',
-  //   url: 'https://activity.huaweicloud.com/2020feb_promotion/index.html?&fromuser=a3Vib2FyZA==&utm_source=a3Vib2FyZA==&utm_medium=cps&utm_campaign=201905',
-  //   weight: 60
-  // },
-  // {
-  //   name: 'Suveng',
-  //   description: '趣丸网络科技 Suveng 免费提供的视频课',
-  //   strong: '免费学习',
-  //   url: 'https://www.bilibili.com/video/av88798402',
-  //   weight: 60,
-  // },
-  // {
-  //   name: '阳明的博客',
-  //   description: 'Kubernetes，',
-  //   strong: '实战课程',
-  //   action: '去看看',
-  //   url: 'https://www.qikqiak.com/post/promotion-51/',
-  //   weight: 1
-  // },
-  // {
-  //   name: '极客时间',
-  //   description: '精要30计，让DevOps快速落地。',
-  //   strong: 'DevOps实战笔记',
-  //   action: '去看看',
-  //   url: 'https://time.geekbang.org/column/intro/100036601?code=0Totv3yN%2FohiumTclUF4ky4qRYs9Ecq6ZK4IdgNf88M%3D',
-  //   weight: 1
-  // },
+  {
+    name: '华为云',
+    description: '828企业上云节，亿元上云补贴',
+    strong: '限时抢购',
+    action: '立享优惠',
+    url: 'https://activity.huaweicloud.com/828_promotion/index.html?fromacct=36cf686d-2650-4107-baa4-f0dc3c860df4&utm_source=V1g3MDY4NTY=&utm_medium=cps&utm_campaign=201905',
+    weight: 60
+  },
   {
     name: '腾讯云',
-    description: '【腾讯云】云产品采购季，助力行业复工。',
+    description: '【腾讯云】云产品限时秒杀。',
     strong: '1核2G云服务器，首年99元',
-    action: '去抢',
-    url: 'https://cloud.tencent.com/act/cps/redirect?redirect=1053&cps_key=2ee6baa049659f4713ddc55a51314372&from=console',
-    weight: 60
+    action: '立即抢购',
+    url: 'https://cloud.tencent.com/act/cps/redirect?redirect=1062&cps_key=2ee6baa049659f4713ddc55a51314372&from=console',
+    weight: 100
   },
   // {
   //   name: '阿里云',

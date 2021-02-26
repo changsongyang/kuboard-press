@@ -5,7 +5,7 @@ module.exports = {
   //   devtool: 'source-map'
   // }),
   modules: ['bootstrap-vue/nuxt'],
-  title: 'Kuboard官网',
+  title: 'Kuboard',
   description: '一款Kubernetes_Dashboard_简化Kubernetes的学习和使用_帮助您快速落地Kubernetes_提供_Kubernetes_免费中文教程_国内安装文档',
   head: [
     // ['meta', {name: 'keywords', content: 'Kubernetes教程,Kubernetes安装,K8S教程,K8S安装,Kubernetes管理界面'}],
@@ -61,7 +61,7 @@ module.exports = {
     //   // popupComponent: 'KbSWUpdatePopup',
     //   updatePopup: {
     //     '/': {
-    //       message: "Kuboard官网已更新",
+    //       message: "Kuboard已更新",
     //       buttonText: "点击刷新"
     //     }
     //   }
@@ -126,13 +126,15 @@ module.exports = {
     incompleteRatio: 15,
     showMoreAds: false,
     showAds: true,
-    kuboardToken: 'eyJhbGciOiJSUzI1NiIsImtpZCI6IiJ9.eyJpc3MiOiJrdWJlcm5ldGVzL3NlcnZpY2VhY2NvdW50Iiwia3ViZXJuZXRlcy5pby9zZXJ2aWNlYWNjb3VudC9uYW1lc3BhY2UiOiJrdWJlLXN5c3RlbSIsImt1YmVybmV0ZXMuaW8vc2VydmljZWFjY291bnQvc2VjcmV0Lm5hbWUiOiJrdWJvYXJkLXZpZXdlci10b2tlbi1mdGw0diIsImt1YmVybmV0ZXMuaW8vc2VydmljZWFjY291bnQvc2VydmljZS1hY2NvdW50Lm5hbWUiOiJrdWJvYXJkLXZpZXdlciIsImt1YmVybmV0ZXMuaW8vc2VydmljZWFjY291bnQvc2VydmljZS1hY2NvdW50LnVpZCI6ImE1YWFiMmQxLTQxMjYtNDU5Yi1hZmNhLTkyYzMwZDk0NTQzNSIsInN1YiI6InN5c3RlbTpzZXJ2aWNlYWNjb3VudDprdWJlLXN5c3RlbTprdWJvYXJkLXZpZXdlciJ9.eYqN3FLIT6xs0-lm8AidZtaiuHeX70QTn9FhJglhEyh5dlyMU5lo8UtR-h1OY8sTSeYdYKJAS83-9SUObKQhp6XNmRgOYAfZblKUy4mvbGVQ3dn_qnzxYxt6zdGCwIY7E34eNNd9IjMF7G_Y4eJLWE7NvkSB1O8zbdn8En9rQXv_xJ9-ugCyr4CYB1lDGuZl3CIXgQ1FWcQdUBrxTT95tzcNTB0l6OUOGhRxOfw-RyIOST83GV5U0iVzxnD4sjgSaJefvCU-BmwXgpxAwRVhFyHEziXXa0CuZfBfJbmnQW308B4wocr4QDm6Nvmli1P3B6Yo9-HNF__d2hCwZEr7eg',
+    // kuboardToken: 'eyJhbGciOiJSUzI1NiIsImtpZCI6IiJ9.eyJpc3MiOiJrdWJlcm5ldGVzL3NlcnZpY2VhY2NvdW50Iiwia3ViZXJuZXRlcy5pby9zZXJ2aWNlYWNjb3VudC9uYW1lc3BhY2UiOiJrdWJlLXN5c3RlbSIsImt1YmVybmV0ZXMuaW8vc2VydmljZWFjY291bnQvc2VjcmV0Lm5hbWUiOiJrdWJvYXJkLXZpZXdlci10b2tlbi1mdGw0diIsImt1YmVybmV0ZXMuaW8vc2VydmljZWFjY291bnQvc2VydmljZS1hY2NvdW50Lm5hbWUiOiJrdWJvYXJkLXZpZXdlciIsImt1YmVybmV0ZXMuaW8vc2VydmljZWFjY291bnQvc2VydmljZS1hY2NvdW50LnVpZCI6ImE1YWFiMmQxLTQxMjYtNDU5Yi1hZmNhLTkyYzMwZDk0NTQzNSIsInN1YiI6InN5c3RlbTpzZXJ2aWNlYWNjb3VudDprdWJlLXN5c3RlbTprdWJvYXJkLXZpZXdlciJ9.eYqN3FLIT6xs0-lm8AidZtaiuHeX70QTn9FhJglhEyh5dlyMU5lo8UtR-h1OY8sTSeYdYKJAS83-9SUObKQhp6XNmRgOYAfZblKUy4mvbGVQ3dn_qnzxYxt6zdGCwIY7E34eNNd9IjMF7G_Y4eJLWE7NvkSB1O8zbdn8En9rQXv_xJ9-ugCyr4CYB1lDGuZl3CIXgQ1FWcQdUBrxTT95tzcNTB0l6OUOGhRxOfw-RyIOST83GV5U0iVzxnD4sjgSaJefvCU-BmwXgpxAwRVhFyHEziXXa0CuZfBfJbmnQW308B4wocr4QDm6Nvmli1P3B6Yo9-HNF__d2hCwZEr7eg',
+    kuboardToken: 'eyJhbGciOiJSUzI1NiIsImtpZCI6InZ6SzVqZFNJOXZFMmxQSkhXamNBcFY4RU9FR0RvSUR5bzJIY0NwVG1zODQifQ.eyJpc3MiOiJrdWJlcm5ldGVzL3NlcnZpY2VhY2NvdW50Iiwia3ViZXJuZXRlcy5pby9zZXJ2aWNlYWNjb3VudC9uYW1lc3BhY2UiOiJrdWJlLXN5c3RlbSIsImt1YmVybmV0ZXMuaW8vc2VydmljZWFjY291bnQvc2VjcmV0Lm5hbWUiOiJrdWJvYXJkLXZpZXdlci10b2tlbi0yOW40cyIsImt1YmVybmV0ZXMuaW8vc2VydmljZWFjY291bnQvc2VydmljZS1hY2NvdW50Lm5hbWUiOiJrdWJvYXJkLXZpZXdlciIsImt1YmVybmV0ZXMuaW8vc2VydmljZWFjY291bnQvc2VydmljZS1hY2NvdW50LnVpZCI6IjQzMWMwNmYyLTNiNTAtNGEyMy1hYjM1LTkyNDQwNTQ2NzFkZCIsInN1YiI6InN5c3RlbTpzZXJ2aWNlYWNjb3VudDprdWJlLXN5c3RlbTprdWJvYXJkLXZpZXdlciJ9.kgwTa6t00gNC0vgr6HOvCqkDghPcW-jVDg-_K6WLy97ppb9jvaqVz-AxXzF7mJqXnNetbJw-8-x_L3ogSsDlTKmRucao96VA2tPKxel8pM04J8MU0ZmYgWhTJelibbxmQK3jwGM4x32bckOOvmtumcXdsBRN0z1SZ1iu4H0VoaswhfoFS4ZJKoe61xyqoDhQx4RLCVJh_-Uctd5RCcPLWFEk-BHqC8vUTy8QcRst6RIIozQdTqsv7Xs6bH6dHrHFS--eVVTH2orQdm8znuUFhlqFOOjmCIMzIlaUQC_SO9URIGYOs0jrk27N9KC0HvQ5dLgFmwyNJ0Gu7cYi23NP1A',
     nav: [
       // { text: '简介', link: '/overview/' },
       { text: '安装', link: '/install/install-dashboard' },
       { text: '教程', link: '/learning/' },
       { text: '使用', link: '/guide/' },
       { text: '支持', link: '/support/' },
+      { text: '论坛', link: 'https://forum.kuboard.cn/'},
       // { text: '培训', link: 'https://kubetrain.cn/?from=kuboard', target: '_blank' },
       // { text: '博客', link: 'http://k8s.kubetrain.cn/' },
       // { text: '论坛', link: 'http://bbs.kuboard.cn/', target: '_blank' },

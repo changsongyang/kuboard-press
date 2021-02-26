@@ -7,7 +7,7 @@ meta:
     content: Kubernetes Dashboard安装,Kuboard安装,K8S Dashboard安装
 ---
 
-# 安装Kuboard
+# 安装 Kuboard v2
 
 <AdSenseTitle/>
 
@@ -19,9 +19,20 @@ Kuboard 是 Kubernetes 的一款图形化管理界面。
   <InstallDashboardPreview/>
 </div>
 
+## Kuboard v3 版本介绍
+
+* Kuboard v3.0 已经正式发布，相较于 Kuboard v2.0.x， Kuboard v3 最大的特点是支持多 Kubernetes 集群管理。如果您是 Kuboard 的新用户，建议您选择 [Kuboard v3](./v3/install.html)。
+
+* Kuboard v2.0.x 将进入长期维护阶段，如果碰到问题，用户仍然可以在群里找群主解决问题。如果您计划升级到 Kuboard v3，请参考 [从 v2.0.x 升级到 v3.0.x](./v3/install.html#从-v2.0.x-升级到-v3.0.x)
+
+> 如果您希望继续安装 Kuboard v2.0.x，请继续阅读本文后面的内容。
 ## 前提
 
-安装 Kuboard 时，假设您已经有一个 Kubernetes 集群
+安装 Kuboard 时，假设您已经有一个 Kubernetes 集群，以下任何形式安装的集群都可以：
+* kubeadm 安装（或者基于 kubeadm 的衍生工具，如 Sealos 等）；
+* 二进制安装；
+* 阿里云、腾讯云等公有云托管集群；
+* 其他。
 
 如果没有 Kubernetes 集群：
 
@@ -35,14 +46,16 @@ Kuboard 是 Kubernetes 的一款图形化管理界面。
 
 | Kubernetes 版本 | Kuboard 版本   | 兼容性 | 说明                                                         |
 | --------------- | -------------- | ------ | ------------------------------------------------------------ |
-| v1.18           | v1.0.x | <span style="font-size: 24px;">😄</span>      | 已验证                            |
-| v1.17           | v1.0.x | <span style="font-size: 24px;">😄</span>      | 已验证                            |
-| v1.16           | v1.0.x | <span style="font-size: 24px;">😄</span>      | 已验证                            |
-| v1.15           | v1.0.x | <span style="font-size: 24px;">😄</span>      | 已验证                            |
-| v1.14           | v1.0.x | <span style="font-size: 24px;">😄</span>      | 已验证                            |
-| v1.13           | v1.0.x | <span style="font-size: 24px;">😄</span>      | 已验证                       |
-| v1.12           | v1.0.x | <span style="font-size: 24px;">😐</span>      | Kubernetes Api v1.12 不支持 dryRun，<br />Kuboard 不支持 Kubernetes v1.12 |
-| v1.11           | v1.0.x | <span style="font-size: 24px;">😐</span>      | Kuboard 不支持 Kubernetes v1.11                                                         |
+| v1.20           | v2.0.x          | <span style="font-size: 24px;">😄</span>      | 已验证                            |
+| v1.19           | v2.0.x          | <span style="font-size: 24px;">😄</span>      | 已验证                            |
+| v1.18           | v1.0.x， v2.0.x | <span style="font-size: 24px;">😄</span>      | 已验证                            |
+| v1.17           | v1.0.x， v2.0.x | <span style="font-size: 24px;">😄</span>      | 已验证                            |
+| v1.16           | v1.0.x， v2.0.x | <span style="font-size: 24px;">😄</span>      | 已验证                            |
+| v1.15           | v1.0.x， v2.0.x | <span style="font-size: 24px;">😄</span>      | 已验证                            |
+| v1.14           | v1.0.x， v2.0.x | <span style="font-size: 24px;">😄</span>      | 已验证                            |
+| v1.13           | v1.0.x， v2.0.x | <span style="font-size: 24px;">😄</span>      | 已验证                       |
+| v1.12           | v1.0.x， v2.0.x | <span style="font-size: 24px;">😐</span>      | Kubernetes Api v1.12 不支持 dryRun，<br />Kuboard 不支持 Kubernetes v1.12 |
+| v1.11           | v1.0.x， v2.0.x | <span style="font-size: 24px;">😐</span>      | Kuboard 不支持 Kubernetes v1.11                                                         |
 ## 安装
 
 
@@ -53,13 +66,14 @@ Kuboard 是 Kubernetes 的一款图形化管理界面。
 安装 Kuboard。
 
 > 如果您参考 https://kuboard.cn 网站上提供的 Kubernetes 安装文档，可在 master 节点上执行以下命令。
+> * 如果您已经安装了 Kuboard v1.0.x，请参考 [了解如何从 v1.0.x 升级到 Kuboard v2.0.x](/support/change-log/upgrade-1-2.html)
 
 <b-tabs content-class="mt-3">
 <b-tab title="稳定版">
 
 ``` sh
 kubectl apply -f https://kuboard.cn/install-script/kuboard.yaml
-kubectl apply -f https://addons.kuboard.cn/metrics-server/0.3.6/metrics-server.yaml
+kubectl apply -f https://addons.kuboard.cn/metrics-server/0.3.7/metrics-server.yaml
 ```
 
 </b-tab>
@@ -67,7 +81,7 @@ kubectl apply -f https://addons.kuboard.cn/metrics-server/0.3.6/metrics-server.y
 
 ``` sh
 kubectl apply -f https://kuboard.cn/install-script/kuboard-beta.yaml
-kubectl apply -f https://addons.kuboard.cn/metrics-server/0.3.6/metrics-server.yaml
+kubectl apply -f https://addons.kuboard.cn/metrics-server/0.3.7/metrics-server.yaml
 ```
 
 </b-tab>
@@ -89,7 +103,7 @@ kubectl apply -f https://addons.kuboard.cn/metrics-server/0.3.6/metrics-server-a
 查看 Kuboard 运行状态：
 
 ``` sh
-kubectl get pods -l k8s.eip.work/name=kuboard -n kube-system
+kubectl get pods -l k8s.kuboard.cn/name=kuboard -n kube-system
 ```
 
 输出结果如下所示：
@@ -136,7 +150,7 @@ kuboard-54c9c4f6cb-6lf88   1/1     Running       0          45s
 
 ``` sh
 kubectl delete -f https://kuboard.cn/install-script/kuboard.yaml
-kubectl delete -f https://addons.kuboard.cn/metrics-server/0.3.6/metrics-server.yaml
+kubectl delete -f https://addons.kuboard.cn/metrics-server/0.3.7/metrics-server.yaml
 ```
 
 </b-tab>
@@ -144,7 +158,7 @@ kubectl delete -f https://addons.kuboard.cn/metrics-server/0.3.6/metrics-server.
 
 ``` sh
 kubectl delete -f https://kuboard.cn/install-script/kuboard-beta.yaml
-kubectl delete -f https://addons.kuboard.cn/metrics-server/0.3.6/metrics-server.yaml
+kubectl delete -f https://addons.kuboard.cn/metrics-server/0.3.7/metrics-server.yaml
 ```
 
 </b-tab>
@@ -153,7 +167,7 @@ kubectl delete -f https://addons.kuboard.cn/metrics-server/0.3.6/metrics-server.
 
 ``` sh
 kubectl delete -f https://kuboard.cn/install-script/kuboard-arm.yaml
-kubectl delete -f https://addons.kuboard.cn/metrics-server/0.3.6/metrics-server-arm.yaml
+kubectl delete -f https://addons.kuboard.cn/metrics-server/0.3.7/metrics-server-arm.yaml
 ```
 
 </b-tab>
@@ -261,7 +275,7 @@ kubectl port-forward service/kuboard 8080:80 -n kube-system
 
 `http://localhost:8080`
 
-输入前一步骤中获得的 token，可进入 **Kuboard 集群概览页**
+输入前一步骤中获得的 token，可进入 **Kubernetes 集群概览**
 
 
 ::: tip
@@ -288,7 +302,7 @@ kubectl port-forward service/kuboard 8080:80 -n kube-system
     * Kuboard 容器中不能访问到您的 API Server，定位问题的方式如下：
       * 进入 Kuboard 的终端
         ```sh
-        kubectl exec -it $(kubectl get pods -l k8s.eip.work/name=kuboard -n kube-system | grep kuboard | awk '{print $1}') /bin/bash -n kube-system
+        kubectl exec -it $(kubectl get pods -l k8s.kuboard.cn/name=kuboard -n kube-system | grep kuboard | awk '{print $1}') /bin/bash -n kube-system
         ```
       * 在 Kuboard 终端中执行
         ``` sh

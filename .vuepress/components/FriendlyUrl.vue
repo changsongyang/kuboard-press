@@ -2,10 +2,9 @@
   <div>
     <div class="copyright">
       Copyright © 2019-present 邵欢庆 
-      <span @click="$sendGaEvent('友情链接', '友情链接: 仁聚汇通', '友情链接:' + $page.path)">
-        <a href="http://www.eigpay.com" target="_blank">仁聚汇通</a>
+      <span>
+        <a href="https://beian.miit.gov.cn" target="_blank">京ICP备19008693号-2</a>
       </span>
-      | 京ICP备19008693号-2
     </div>
     <div style="margin-top: 20px;">
     </div>
@@ -32,7 +31,7 @@ export default {
   data () {
     return {
       urls: [
-        {name: 'sealos官网', url: 'http://store.lameleg.com?referrer=shaohq', icon: 'https://hugo-picture.oss-cn-beijing.aliyuncs.com/blog/2019-08-27-044824.jpg'},
+        {name: 'sealos', url: 'http://store.lameleg.com?referrer=shaohq', icon: 'https://hugo-picture.oss-cn-beijing.aliyuncs.com/blog/2019-08-27-044824.jpg'},
         {name: '云原生实验室', url: 'https://fuckcloudnative.io/', icon: 'https://hugo-picture.oss-cn-beijing.aliyuncs.com/favicon-32x32.png'},
       ]
     }

@@ -33,7 +33,7 @@ Kubernetes 对 Pod 进行调度时，以当时集群中各节点的可用资源�
 
 * 执行以下命令安装 nfs 服务器所需的软件包
   ``` sh
-  yum install -y nfs-utils
+  yum install -y rpcbind nfs-utils
   ```
 * 执行命令 `vim /etc/exports`，创建 exports 文件，文件内容如下：
   ```
@@ -107,6 +107,6 @@ Kubernetes 对 Pod 进行调度时，以当时集群中各节点的可用资源�
 
 * 在场景中使用存储类
   
-  此时您可以在自己的场景中使用刚创建的存储类。Kuboard官网上，有以下几个地方可以用到NFS存储类：
+  此时您可以在自己的场景中使用刚创建的存储类。Kuboard上，有以下几个地方可以用到NFS存储类：
   * [导入 example 微服务](/guide/example/import.html)
   * [安装监控套件](/guide/example/monitor.html#安装监控套件)
